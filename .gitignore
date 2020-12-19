@@ -1,1 +1,3 @@
-world_icon.jpeg
+save/world_icon.jpeg
+maps/*
+!map
