@@ -2213,15 +2213,20 @@ function setDimensionById(id) {
     else if (id === 1) {
         globalDimensionId = id;
         $('#dimensionSelectName').html('Nether');
+        adjustLayerDropDown(0, 128);
+        $('.layerGoto[data-id="62"]').hide();
     }
     else if (id === 2) {
         globalDimensionId = id;
         $('#dimensionSelectName').html('The End');
+        adjustLayerDropDown(0, 128);
+        $('.layerGoto[data-id="62"]').hide();
     }
     else {
         // default to overworld
         globalDimensionId = id;
         $('#dimensionSelectName').html('Overworld');
+        adjustLayerDropDown(-64, 319);
     }
 
     if (prevDimId !== globalDimensionId) {
@@ -2229,6 +2234,16 @@ function setDimensionById(id) {
     }
 }
 
+function adjustLayerDropDown(min, max) {
+    var lcv = -64
+    for(; lcv <= 319; lcv++) {
+        if (lcv < min || lcv > max) {
+            $('.layerGoto[data-id="' + lcv + '"]').hide();
+        } else {
+            $('.layerGoto[data-id="' + lcv + '"]').show();
+        }
+    }
+}
 
 function checkPlayerDistance(feature) {
     if ( ! doCheckPlayerDistanceFlag ) { return true; }
@@ -2569,17 +2584,26 @@ function spawnableToggle() {
 function layerMove(delta) {
     //this_.getMap().getView().setRotation(0);
     layerRawIndex += delta;
-    if (layerRawIndex < 0) { layerRawIndex = 0; }
-    if (layerRawIndex > 255) { layerRawIndex = 255; }
+    var min = dimensionInfo[globalDimensionId].bottomLayer;
+    var max = dimensionInfo[globalDimensionId].topLayer;
+
+    // bound the layer within the dimensions limits
+    if (layerRawIndex < min) { layerRawIndex = min; }
+    if (layerRawIndex > max) { layerRawIndex = max; }
     layerGoto(layerRawIndex);
 }
 
 function layerGoto(layer) {
     // we make sure that layer is an integer (mob positions can have decimal points)
     layer = Math.floor(layer);
-    if (layer < 0) { layer = 0; }
-    if (layer > 255) { layer = 255; }
-    if (setLayer(dimensionInfo[globalDimensionId].listLayers[layer], 'You need to run bedrock_viz with --html-all') === 0) {
+    var min = dimensionInfo[globalDimensionId].bottomLayer;
+    var max = dimensionInfo[globalDimensionId].topLayer;
+
+    // bound the layer within the dimensions limits
+    if (layer < min) { layer = min; }
+    if (layer > max) { layer = max; }
+    // offset into the list by the min, to map -64 to 0 for overworld
+    if (setLayer(dimensionInfo[globalDimensionId].listLayers[layer - min], 'You need to run bedrock_viz with --html-all') === 0) {
         globalLayerMode = 1;
         layerRawIndex = layer;
         $('#layerNumber').html('' + layer);
