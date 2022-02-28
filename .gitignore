@@ -1,3 +1,5 @@
 save/world_icon.jpeg
 maps/*
 !map
+out1/bedrock_viz.log
+out1/output.geojson
