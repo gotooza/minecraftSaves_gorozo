@@ -1,7 +1,7 @@
 // mcpe_viz javascript helper file -- created by bedrock_viz program
 var worldName = 'gorozo';
 var worldSeed = 197082241;
-var creationTime = 'Mon Apr  4 15:40:44 2022';
+var creationTime = 'Mon Apr 11 21:06:14 2022';
 var creationBedrockVizVersion = '0.1.7';
 var loadGeoJSONFlag = false;
 var fnGeoJSON = 'output.geojson';
@@ -14,8 +14,8 @@ var dimensionInfo = {
   maxWorldX: 5888 + 15,
   minWorldY: -7680,
   maxWorldY: 19584 + 15,
-  playerPosX: 9782.572754,
-  playerPosY: 19597.907487,
+  playerPosX: 9784.262695,
+  playerPosY: 19520.452507,
   geojsonBlocks: [  ],
   spawnableFlag: false,
   fnLayerTop: 'tiles/bedrock_viz.overworld.map.png.{y}.{x}.png',
@@ -2140,7 +2140,7 @@ var biomeColorLUT = {
 var imageIconLUT = {
 '94': 'images/bedrock_viz.block.1.0.png',
 '216': 'images/bedrock_viz.block.101.0.png',
-'126': 'images/bedrock_viz.block.102.0.png',
+'120': 'images/bedrock_viz.block.102.0.png',
 '210': 'images/bedrock_viz.block.103.0.png',
 '183': 'images/bedrock_viz.block.106.0.png',
 '57': 'images/bedrock_viz.block.107.0.png',
@@ -2160,7 +2160,7 @@ var imageIconLUT = {
 '182': 'images/bedrock_viz.block.135.0.png',
 '185': 'images/bedrock_viz.block.136.0.png',
 '60': 'images/bedrock_viz.block.139.0.png',
-'125': 'images/bedrock_viz.block.14.0.png',
+'119': 'images/bedrock_viz.block.14.0.png',
 '181': 'images/bedrock_viz.block.143.0.png',
 '234': 'images/bedrock_viz.block.145.0.png',
 '215': 'images/bedrock_viz.block.148.0.png',
@@ -2169,7 +2169,7 @@ var imageIconLUT = {
 '219': 'images/bedrock_viz.block.155.0.png',
 '222': 'images/bedrock_viz.block.156.0.png',
 '63': 'images/bedrock_viz.block.158.0.png',
-'122': 'images/bedrock_viz.block.159.0.png',
+'123': 'images/bedrock_viz.block.159.0.png',
 '227': 'images/bedrock_viz.block.16.0.png',
 '232': 'images/bedrock_viz.block.161.0.png',
 '143': 'images/bedrock_viz.block.162.0.png',
@@ -2179,7 +2179,7 @@ var imageIconLUT = {
 '218': 'images/bedrock_viz.block.167.0.png',
 '24': 'images/bedrock_viz.block.17.0.png',
 '74': 'images/bedrock_viz.block.171.0.png',
-'123': 'images/bedrock_viz.block.172.0.png',
+'124': 'images/bedrock_viz.block.172.0.png',
 '164': 'images/bedrock_viz.block.173.0.png',
 '156': 'images/bedrock_viz.block.174.0.png',
 '147': 'images/bedrock_viz.block.175.0.png',
@@ -2189,7 +2189,7 @@ var imageIconLUT = {
 '233': 'images/bedrock_viz.block.186.0.png',
 '238': 'images/bedrock_viz.block.19.0.png',
 '163': 'images/bedrock_viz.block.2.0.png',
-'127': 'images/bedrock_viz.block.20.0.png',
+'121': 'images/bedrock_viz.block.20.0.png',
 '207': 'images/bedrock_viz.block.22.0.png',
 '178': 'images/bedrock_viz.block.23.0.png',
 '93': 'images/bedrock_viz.block.24.0.png',
@@ -2229,7 +2229,7 @@ var imageIconLUT = {
 '68': 'images/bedrock_viz.block.77.0.png',
 '159': 'images/bedrock_viz.block.79.0.png',
 '223': 'images/bedrock_viz.block.80.0.png',
-'124': 'images/bedrock_viz.block.81.0.png',
+'128': 'images/bedrock_viz.block.81.0.png',
 '165': 'images/bedrock_viz.block.82.0.png',
 '87': 'images/bedrock_viz.block.85.0.png',
 '134': 'images/bedrock_viz.block.86.0.png',
@@ -2288,8 +2288,8 @@ var imageIconLUT = {
 '83': 'images/bedrock_viz.item.303.0.png',
 '109': 'images/bedrock_viz.item.304.0.png',
 '49': 'images/bedrock_viz.item.305.0.png',
-'119': 'images/bedrock_viz.item.306.0.png',
-'120': 'images/bedrock_viz.item.307.0.png',
+'125': 'images/bedrock_viz.item.306.0.png',
+'126': 'images/bedrock_viz.item.307.0.png',
 '144': 'images/bedrock_viz.item.308.0.png',
 '76': 'images/bedrock_viz.item.309.0.png',
 '228': 'images/bedrock_viz.item.310.0.png',
@@ -2307,7 +2307,7 @@ var imageIconLUT = {
 '39': 'images/bedrock_viz.item.322.0.png',
 '103': 'images/bedrock_viz.item.324.0.png',
 '50': 'images/bedrock_viz.item.325.0.png',
-'128': 'images/bedrock_viz.item.328.0.png',
+'122': 'images/bedrock_viz.item.328.0.png',
 '11': 'images/bedrock_viz.item.329.0.png',
 '217': 'images/bedrock_viz.item.330.0.png',
 '9': 'images/bedrock_viz.item.331.0.png',
@@ -2376,5 +2376,5 @@ var imageIconLUT = {
 '184': 'images/bedrock_viz.item.427.0.png',
 '45': 'images/bedrock_viz.item.428.0.png',
 '186': 'images/bedrock_viz.item.430.0.png',
-'121': 'images/bedrock_viz.item.431.0.png',
+'127': 'images/bedrock_viz.item.431.0.png',
 '-1': ''};
